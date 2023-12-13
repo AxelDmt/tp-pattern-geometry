@@ -1,6 +1,4 @@
-package org;
-
-import org.acme.geometry.Coordinate;
+package org.acme.geometry;
 
 public class Point extends Geometry{
 

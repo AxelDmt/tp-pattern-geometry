@@ -1,4 +1,4 @@
-package org;
+package org.acme.geometry;
 import java.util.List;
 
 public class LineString {
