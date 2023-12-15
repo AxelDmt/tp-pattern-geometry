@@ -13,7 +13,7 @@ public interface Geometry {
 
     Enveloppe getEnvelope();
 
-    void accept(GeometryVisitor visitor);
+    <T> T accept(GeometryVisitor<T> visitor);
 
     String asText();
 

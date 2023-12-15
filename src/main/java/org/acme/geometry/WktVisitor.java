@@ -1,6 +1,6 @@
 package org.acme.geometry;
 
-public class WktVisitor implements GeometryVisitor{
+public class WktVisitor implements GeometryVisitor<Void>{
     
     private StringBuilder buffer;
 
@@ -12,15 +12,17 @@ public class WktVisitor implements GeometryVisitor{
         return buffer.toString();
     };  
 
-    public void visit(Point point) {
+    public Void visit(Point point) {
         if (point.isEmpty()) {
             buffer.append("POINT EMPTY");
         } else {
             buffer.append("POINT("+point.getCoordinate().getX()+" "+point.getCoordinate().getY()+")");
         }
+
+        return null;
     }
 
-    public void visit(LineString lineString) {
+    public Void visit(LineString lineString) {
         if (lineString.isEmpty()) {
             buffer.append("LINESTRING EMPTY");
         } else {
@@ -35,10 +37,12 @@ public class WktVisitor implements GeometryVisitor{
             }
             buffer.append(")");
         }
+
+        return null;
     }
 
     @Override
-    public void visit(GeometryCollection geometryCollection) {
+    public Void visit(GeometryCollection geometryCollection) {
         if (geometryCollection.isEmpty()){
             buffer.append("GEOMETRYCOLLECTION EMPTY");
         }else{
@@ -50,6 +54,8 @@ public class WktVisitor implements GeometryVisitor{
                 geometryCollection.getGeometryN(i).accept(this);
             }
             buffer.append(")");
-        } 
+        }
+
+        return null;
     }
 }
