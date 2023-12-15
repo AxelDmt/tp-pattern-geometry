@@ -46,4 +46,9 @@ public class Point implements Geometry {
         builder.insert(coordinate);
         return builder.build();
     }
+
+    @Override
+    public void accept(GeometryVisitor visitor){
+        visitor.visit(this);
+    }
 }
