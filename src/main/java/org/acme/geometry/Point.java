@@ -34,4 +34,9 @@ public class Point implements Geometry {
     public String getType() {
         return "Point";
     }
+
+    @Override
+    public Geometry clone() {
+        return new Point(new Coordinate(this.coordinate.getX(), this.coordinate.getY()));
+    }
 }

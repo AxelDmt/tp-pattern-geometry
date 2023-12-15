@@ -8,4 +8,6 @@ public interface Geometry {
     void translate(double x, double y);
 
     boolean isEmpty();
+
+    Geometry clone();
 }
