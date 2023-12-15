@@ -41,13 +41,6 @@ public class Point extends AbstractGeometry{
     }
 
     @Override
-    public Enveloppe getEnvelope() {
-        EnveloppeBuilder builder = new EnveloppeBuilder();
-        builder.insert(coordinate);
-        return builder.build();
-    }
-
-    @Override
     public void accept(GeometryVisitor visitor){
         visitor.visit(this);
     }
