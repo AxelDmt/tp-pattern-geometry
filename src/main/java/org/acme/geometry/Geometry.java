@@ -16,4 +16,6 @@ public interface Geometry {
     void accept(GeometryVisitor visitor);
 
     String asText();
+
+    void addListener(GeometryListener listener);
 }
