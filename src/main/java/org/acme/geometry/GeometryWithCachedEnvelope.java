@@ -27,7 +27,7 @@ public class GeometryWithCachedEnvelope implements Geometry,GeometryListener{
     }
 
     @Override
-    public Geometry clone() {
+    public GeometryWithCachedEnvelope clone() {
         return new GeometryWithCachedEnvelope(original.clone());
     }
 
