@@ -1,7 +1,5 @@
 package org.acme.geometry;
 
-import java.util.List;
-
 public class WktWriter {
     
     public String write(Geometry geometry){

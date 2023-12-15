@@ -7,8 +7,6 @@ import java.util.Arrays;
 
 public class WktVisitorTest {
 
-    private static final double EPSILON = 1e-15;
-
     @Test
     public void testVisitPoint() {
         Geometry geometry = new Point(new Coordinate(3.0, 4.0));

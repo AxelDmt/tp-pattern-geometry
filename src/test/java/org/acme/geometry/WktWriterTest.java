@@ -7,8 +7,6 @@ import java.util.List;
 
 public class WktWriterTest {
 
-    private static final double EPSILON = 1e-15;
-
     @Test
     public void testWritePoint() {
         Geometry point = new Point(new Coordinate(3.0, 4.0));

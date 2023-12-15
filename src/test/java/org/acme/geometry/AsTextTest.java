@@ -5,11 +5,9 @@ import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 public class AsTextTest {
-    private static final double EPSILON = 1e-15;
 
     @Test
     public void testasTextPoint() {

@@ -1,7 +1,5 @@
 package org.acme.geometry;
 
-import org.acme.geometry.Coordinate;
-
 // Classe Point implémentant l'interface Geometry
 public class Point extends AbstractGeometry{
 
