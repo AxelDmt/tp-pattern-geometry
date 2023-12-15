@@ -38,8 +38,6 @@ public class Enveloppe {
 
     @Override
     public String toString() {
-        return String.format("%f,%f,%f,%f", getXmin(), getYmin(), getXmax(), getYmax());
-    }
-
-    
+        return getXmin() + "," + getYmin() + "," + getXmax() + "," + getYmax();
+    }    
 }

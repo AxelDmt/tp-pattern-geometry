@@ -12,7 +12,7 @@ public class LogGeometryVisitor implements GeometryVisitor{
 
     public void visit(Point point) {
         if (point.isEmpty()) {
-            out.print("Je suis un point vide.");
+            out.print("Je suis un point vide.\n");
         } else {
             out.print("Je suis un point avec x = " + point.getCoordinate().getX() + 
                 " et y = " + point.getCoordinate().getY() + ".\n");
@@ -22,7 +22,7 @@ public class LogGeometryVisitor implements GeometryVisitor{
     public void visit(LineString lineString) {
         int numPoints = lineString.getNumPoints();
         if (lineString.isEmpty()) {
-            out.print("Je suis une polyligne vide.");
+            out.print("Je suis une polyligne vide.\n");
         } else {
             out.print("Je suis une polyligne définie par " + numPoints + " point(s).\n");
         }

@@ -14,4 +14,6 @@ public interface Geometry {
     Enveloppe getEnvelope();
 
     void accept(GeometryVisitor visitor);
+
+    String asText();
 }

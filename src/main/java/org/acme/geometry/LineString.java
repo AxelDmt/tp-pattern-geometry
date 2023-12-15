@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Classe LineString implémentant l'interface Geometry
-public class LineString implements Geometry {
+public class LineString extends AbstractGeometry{
 
     private List<Point> points;
 
@@ -45,10 +45,10 @@ public class LineString implements Geometry {
     }
 
     @Override
-    public Geometry clone() {
+    public LineString clone() {
         List<Point> clonedPoints = new ArrayList<>();
         for (Point point : this.points) {
-            clonedPoints.add((Point) point.clone());
+            clonedPoints.add(point.clone());
         }
         return new LineString(clonedPoints);
     }

@@ -3,7 +3,7 @@ package org.acme.geometry;
 import org.acme.geometry.Coordinate;
 
 // Classe Point implémentant l'interface Geometry
-public class Point implements Geometry {
+public class Point extends AbstractGeometry{
 
     private Coordinate coordinate;
 
@@ -36,8 +36,8 @@ public class Point implements Geometry {
     }
 
     @Override
-    public Geometry clone() {
-        return new Point(new Coordinate(this.coordinate.getX(), this.coordinate.getY()));
+    public Point clone() {
+        return new Point(coordinate);
     }
 
     @Override
