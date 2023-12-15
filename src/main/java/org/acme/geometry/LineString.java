@@ -2,16 +2,15 @@ package org.acme.geometry;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LineString extends Geometry{
-    
+// Classe LineString implémentant l'interface Geometry
+public class LineString implements Geometry {
+
     private List<Point> points;
 
-    // Constructeur par défaut initialisant une géométrie vide
     public LineString() {
         this.points = new ArrayList<>();
     }
 
-    // Constructeur avec une liste de points spécifiée
     public LineString(List<Point> points) {
         this.points = (points != null) ? points : new ArrayList<>();
     }
@@ -26,5 +25,22 @@ public class LineString extends Geometry{
         } else {
             throw new IndexOutOfBoundsException("Invalid index for getPointN");
         }
+    }
+
+    @Override
+    public void translate(double x, double y) {
+        for (Point point : points) {
+            point.translate(x, y);
+        }
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return points.isEmpty();
+    }
+
+    @Override
+    public String getType() {
+        return "LineString";
     }
 }

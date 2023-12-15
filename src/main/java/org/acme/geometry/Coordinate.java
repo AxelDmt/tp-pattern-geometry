@@ -1,6 +1,6 @@
 package org.acme.geometry;
 
-public class Coordinate {
+public class Coordinate  {
     private final double x;
     private final double y;
 
@@ -29,7 +29,7 @@ public class Coordinate {
     public double getY() {
         return y;
     }
-
+    
     // Méthode pour représenter la coordonnée sous forme de chaîne au format JSON
     @Override
     public String toString() {
