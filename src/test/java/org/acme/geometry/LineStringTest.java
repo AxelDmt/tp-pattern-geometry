@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 import java.util.List;
 
-import org.LineString;
-import org.Point;
+import org.acme.geometry.LineString;
+import org.acme.geometry.Point;
 import org.junit.Test;
 
 public class LineStringTest {

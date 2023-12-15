@@ -39,4 +39,11 @@ public class Point implements Geometry {
     public Geometry clone() {
         return new Point(new Coordinate(this.coordinate.getX(), this.coordinate.getY()));
     }
+
+    @Override
+    public Enveloppe getEnvelope() {
+        EnveloppeBuilder builder = new EnveloppeBuilder();
+        builder.insert(coordinate);
+        return builder.build();
+    }
 }

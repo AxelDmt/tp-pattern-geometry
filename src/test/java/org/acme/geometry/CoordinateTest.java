@@ -3,7 +3,6 @@ package org.acme.geometry;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 public class CoordinateTest {

@@ -2,7 +2,7 @@ package org.acme.geometry;
 
 import static org.junit.Assert.assertEquals;
 
-import org.Point;
+import org.acme.geometry.Point;
 import org.junit.Test;
 
 public class PointTest {

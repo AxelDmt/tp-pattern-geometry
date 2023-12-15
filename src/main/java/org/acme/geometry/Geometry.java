@@ -10,4 +10,6 @@ public interface Geometry {
     boolean isEmpty();
 
     Geometry clone();
+
+    Enveloppe getEnvelope();
 }

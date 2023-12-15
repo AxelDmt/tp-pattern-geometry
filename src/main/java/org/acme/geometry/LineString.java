@@ -52,4 +52,13 @@ public class LineString implements Geometry {
         }
         return new LineString(clonedPoints);
     }
+
+    @Override
+    public Enveloppe getEnvelope() {
+        EnveloppeBuilder builder = new EnveloppeBuilder();
+        for (Point point : points) {
+            builder.insert(point.getCoordinate());
+        }
+        return builder.build();
+    }
 }
