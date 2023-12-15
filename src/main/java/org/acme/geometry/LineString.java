@@ -20,7 +20,7 @@ public class LineString extends AbstractGeometry{
     }
 
     public Point getPointN(int n) {
-        if (n >= 0 && n < points.size()) {
+        if (n >= 0 && n < getNumPoints()) {
             return points.get(n);
         } else {
             throw new IndexOutOfBoundsException("Invalid index for getPointN");

@@ -27,4 +27,14 @@ public class LogGeometryVisitor implements GeometryVisitor{
             out.print("Je suis une polyligne définie par " + numPoints + " point(s).\n");
         }
     }
+
+    @Override
+    public void visit(GeometryCollection geometryCollection) {
+        int numGeom = geometryCollection.getNumGeometries();
+        if (geometryCollection.isEmpty()) {
+            out.print("Je suis une polyligne vide.\n");
+        } else {
+            out.print("Je suis une collection de géométrie définie par " + numGeom + " géométrie(s).\n");
+        }
+    }
 }

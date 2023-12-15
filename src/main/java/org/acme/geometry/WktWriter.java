@@ -15,7 +15,8 @@ public class WktWriter {
             LineString lineString = (LineString)geometry;
             if (lineString.isEmpty()) {
             return "LINESTRING EMPTY";
-        } else {}
+            
+           } else {
             StringBuilder sb = new StringBuilder("LINESTRING(");
             for (int i = 0; i < lineString.getNumPoints(); i++) {
                 Point point = lineString.getPointN(i);
@@ -27,8 +28,9 @@ public class WktWriter {
             }
             sb.append(")");
             return sb.toString();
+        }
         }else{
             throw new RuntimeException("geometry type not supported");
+            }
         }
     }
-}

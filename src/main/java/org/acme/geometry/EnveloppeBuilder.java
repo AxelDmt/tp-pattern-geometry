@@ -49,4 +49,13 @@ public class EnveloppeBuilder implements GeometryVisitor{
         }
     }
 
+    @Override
+    public void visit(GeometryCollection geometryCollection) {
+        if (!geometryCollection.isEmpty()){
+            for (int i =0; i < geometryCollection.getNumGeometries(); i++) {
+                geometryCollection.getGeometryN(i).getEnvelope();
+            }
+        }
+    }
+
 }
